@@ -7,7 +7,9 @@
   --grey: #fefefe42;
   --transparent: #fefefe00;
   --yellow: #E5A62A;
+
   --borderSpace: 5rem;
+  --screenMaxWidth: 600px;
 }
 
 /*  
@@ -88,6 +90,31 @@ a{
   max-width: 15rem;
 }
 
+@media only screen and (max-width: 600px) {
+  :root{
+    --borderSpace: 1rem;
+  }
+  .navbarContainer{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: none;
+    width: 90%;
+    font-size: 1rem;
+  }
+  .navbarList{
+    flex-flow: row nowrap;
+    height: fit-content;
+    gap: .5rem;
+  }
+  .imgIcon{
+    max-width: 5rem;
+  }
+}
+
+
+
 /* 
 /* hero (front page)
 */
@@ -115,6 +142,17 @@ a{
   position: relative;
   top: -2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .imgHeroPortrait{
+    max-width: 70vw;
+  }
+  .heroLogo{
+    max-width: 90vw;
+    top: -1rem;
+  }
+}
+
 
 /* 
 /* socialbar
@@ -169,4 +207,10 @@ a{
 .imgSocialIcon{
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .socialbarContainer{
+    display: none;
+  }
 }
