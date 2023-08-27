@@ -87,15 +87,16 @@ a{
 }
 
 .imgIcon{
-  max-width: 15rem;
+  /* max-width: 15rem; */
+  max-width: clamp(9rem, 15vw, 15rem);
 }
 
 @media only screen and (max-width: 600px) {
   :root{
-    --borderSpace: 1rem;
+    --borderSpace: clamp(1rem, 6vw, 5rem);
   }
   .navbarContainer{
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
@@ -108,8 +109,13 @@ a{
     height: fit-content;
     gap: .5rem;
   }
+  .navbarButton{
+    padding: .3rem .5rem .3rem .5rem;
+    max-width: fit-content;
+  }
+
   .imgIcon{
-    max-width: 5rem;
+    max-width: clamp(4rem, 22vw, 10rem);
   }
 }
 
@@ -128,7 +134,8 @@ a{
 
 .imgHeroPortrait{
   object-fit: contain;
-  max-width: 35rem;
+  /* max-width: 35rem; */
+  max-width: clamp(20rem, 40vw, 35rem);
 }
 
 .heroText{
@@ -138,7 +145,8 @@ a{
 }
 
 .heroLogo{
-  max-width: 50rem;
+  /* max-width: 50rem; */
+  max-width: clamp(32rem, 50vw, 50rem);
   position: relative;
   top: -2rem;
 }
