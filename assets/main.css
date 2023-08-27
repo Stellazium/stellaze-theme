@@ -1,0 +1,172 @@
+/*  
+/* root variables 
+*/
+
+:root{
+  --white: #FEFEFE;
+  --grey: #fefefe42;
+  --transparent: #fefefe00;
+  --yellow: #E5A62A;
+  --borderSpace: 5rem;
+}
+
+/*  
+/* reset default settings
+*/
+
+body, h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Chakra Petch', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+a{
+  color: var(--white);
+}
+
+#wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+
+/* 
+/* navbar 
+*/
+
+.navbarContainer{
+  display: flex;
+  position: absolute;
+  top: var(--borderSpace);
+  left: var(--borderSpace);
+  flex-flow: column wrap;
+  gap: 2rem;
+  max-width: fit-content;
+}
+
+.navbarList{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
+
+.navbarButton{
+  text-decoration: none;
+  padding: .5rem 1rem .5rem 1rem;
+  max-width: fit-content;
+}
+
+.selected{
+  background-color: var(--white);
+  color: var(--yellow);
+}
+
+.neutral{
+  color: var(--white);
+  border: 1px dashed;
+}
+
+.neutral:hover{
+  background-color: var(--grey);
+}
+
+.imgIcon{
+  max-width: 15rem;
+}
+
+/* 
+/* hero (front page)
+*/
+
+.heroContainer{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgHeroPortrait{
+  object-fit: contain;
+  max-width: 35rem;
+}
+
+.heroText{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.heroLogo{
+  max-width: 50rem;
+  position: relative;
+  top: -2rem;
+}
+
+/* 
+/* socialbar
+*/
+
+.socialbarContainer{
+  display: flex;
+  position: absolute;
+  top: var(--borderSpace);
+  right: var(--borderSpace);
+}
+
+.calendarContainer{
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+}
+
+.calendarTime{
+  font-size: 2rem;
+  text-align: right;
+}
+
+.calendarDate{
+  text-align: right;
+}
+
+.socialDivider{
+  border-bottom: var(--white) solid 1px;
+  width: 3rem;
+  margin-block: 1rem;
+}
+
+.socialList{
+  display: flex;
+  flex-flow: column;
+  /* gap: 1rem; */
+}
+
+.socialIcon{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: .5rem;
+  border: 1px dashed var(--transparent);
+}
+
+.socialIcon:hover{
+  border: 1px dashed;
+  background-color: var(--grey);
+}
+
+.imgSocialIcon{
+  width: 100%;
+  height: 100%;
+}
