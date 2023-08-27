@@ -1,6 +1,6 @@
-/*  
-/* root variables 
-*/
+/* ====================
+variables
+=====================*/
 
 :root{
   --white: #FEFEFE;
@@ -12,9 +12,9 @@
   --screenMaxWidth: 600px;
 }
 
-/*  
-/* reset default settings
-*/
+/* ====================
+reset default settings
+=====================*/
 
 body, h1, h2, h3, h4, h5, h6, p{
   margin: 0;
@@ -50,9 +50,9 @@ img{
 }
 
 
-/* 
-/* navbar 
-*/
+/* ====================
+navbar
+=====================*/
 
 .navbarContainer{
   display: flex;
@@ -125,9 +125,9 @@ img{
 
 
 
-/* 
-/* hero (front page)
-*/
+/* ====================
+hero (front page)
+=====================*/
 
 .heroContainer{
   display: flex;
@@ -167,9 +167,9 @@ img{
 }
 
 
-/* 
-/* socialbar
-*/
+/* ====================
+socialbar
+=====================*/
 
 .socialbarContainer{
   display: flex;
