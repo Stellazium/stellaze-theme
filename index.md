@@ -2,6 +2,7 @@
 title: YAAAYYY
 layout: wrapper
 background-color: var(--yellow)
+navStyleButton1: selected yellow
 ---
 
 {% include navbar.html %}

@@ -7,13 +7,14 @@ variables
   --grey: #fefefe42;
   --transparent: #fefefe00;
   --yellow: #E5A62A;
+  --black: #111111;
 
   --borderSpace: 5rem;
   --screenMaxWidth: 600px;
 }
 
 /* ====================
-reset default settings
+change basic things
 =====================*/
 
 body, h1, h2, h3, h4, h5, h6, p{
@@ -29,6 +30,7 @@ body{
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 a{
@@ -62,6 +64,7 @@ navbar
   flex-flow: column wrap;
   gap: 2rem;
   max-width: fit-content;
+  z-index: 1;
 }
 
 .navbarList{
@@ -74,17 +77,29 @@ navbar
   text-decoration: none;
   padding: .5rem 1rem .5rem 1rem;
   max-width: fit-content;
+
+  color: var(--white);
+  border: 1px dashed;
 }
 
 .selected{
   background-color: var(--white);
+  border: 1px solid var(--white);
+  /* color: var(--yellow); */
+}
+
+.black{
+  color: var(--black);
+}
+
+.yellow{
   color: var(--yellow);
 }
 
-.neutral{
+/* .neutral{
   color: var(--white);
   border: 1px dashed;
-}
+} */
 
 .neutral:hover{
   background-color: var(--grey);
@@ -176,6 +191,7 @@ socialbar
   position: absolute;
   top: var(--borderSpace);
   right: var(--borderSpace);
+  z-index: 1;
 }
 
 .calendarContainer{
@@ -226,4 +242,51 @@ socialbar
   .socialbarContainer{
     display: none;
   }
+}
+
+
+/* ====================
+portfolio
+=====================*/
+
+.portfolioContainer{
+  display: flex;
+  flex-flow: row;
+  /* background-color: #a21f1f; */
+  max-width: 100%;
+  max-height: 50rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 1rem;
+}
+
+.portfolioItem{
+  /* max-height: 40rem; */
+  height: 100%;
+}
+
+.imgPortfolioItem{
+  max-height: 40rem;
+  height: 40rem;
+}
+
+.portfolioOverlayLeft{
+  pointer-events: none;
+  height: 40rem;
+  width: 30rem;
+  position: absolute;
+  background: linear-gradient(-90deg, rgba(255,255,255,0) 0%, rgba(17,17,17,1) 100%); 
+}
+.portfolioOverlayRight{
+  pointer-events: none;
+  height: 40rem;
+  width: 30rem;
+  right: 0;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(17,17,17,1) 100%); 
+}
+
+.portfolioSpacer{
+  width: 40rem;
+  height: 40rem;
 }
