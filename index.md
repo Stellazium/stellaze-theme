@@ -1,5 +1,5 @@
 ---
-title: YAAAYYY
+title: Home
 layout: wrapper
 background-color: var(--yellow)
 navStyleButton1: selected yellow
