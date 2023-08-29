@@ -213,12 +213,12 @@ socialbar
   align-items: end;
 }
 
-.calendarTime{
+#calendarTime{
   font-size: 2rem;
   text-align: right;
 }
 
-.calendarDate{
+#calendarDate{
   text-align: right;
 }
 
@@ -327,7 +327,6 @@ portfolio
 .right{
   right:0;
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(17,17,17,1) 100%); 
-
 }
 
 .portfolioSpacer{
@@ -367,6 +366,7 @@ portfolio
   position: absolute;
   bottom: var(--borderSpace);
   border: 1px dashed var(--grey);
+  cursor: pointer;
 }
 
 .portfolioButton:hover{
