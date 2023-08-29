@@ -349,6 +349,11 @@ portfolio
 .portfolioItemTooltip h1{
   line-height: 1.8rem;
 }
+
+.portfolioItemTooltip h1, p{
+  z-index: 4;
+}
+
 .portfolioItem:hover .portfolioItemTooltip{
   opacity: 1;
 }
@@ -361,7 +366,7 @@ portfolio
   padding: 1rem;
   position: absolute;
   bottom: var(--borderSpace);
-  border: 1px dashed var(--transparent);
+  border: 1px dashed var(--grey);
 }
 
 .portfolioButton:hover{

@@ -12,7 +12,11 @@
 </head>
 <body style="background-color: {{ page.background-color }};">
   <div id="wrapper" style="background-color: {{ page.background-color }};">
+  {% include navbar.html %}
+
     {{ content }}
+
+  {% include socialbar.html %}
   </div>
 </body>
 </html>

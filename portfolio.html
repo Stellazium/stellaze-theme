@@ -1,117 +1,16 @@
 ---
 title: Portfolio
-layout: wrapper
+layout: portfolioContainer
 background-color: var(--black)
 navStyleButton2: selected black
 ---
 
-{% include navbar.html %}
-
-<div class="portfolioContainer" id="portfolioContainer">
-  <a href="#buttonPressed" class="portfolioButton bottomLeft" id="slideLeft">
-    <img src="assets/portfolio arrow.svg" alt="">
-    <p>Recent projects</p>
-  </a>
-  <div class="portfolioSpacer"></div>
-  <div class="portfolioOverlay left"></div>
-  <a href="#dog" class="portfolioItem">
-    <img class="imgPortfolioItem" src="assets/post-images/2023/image1.png" alt="">
+{% for post in site.posts %}
+  <a target="_blank" href="{{post.link}}" class="portfolioItem">
+    <img class="imgPortfolioItem" src="{{post.image}}" alt="">
     <div class="portfolioItemTooltip">
-      <h1>Service Dog</h1>
-      <p>16 December 2023</p>
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.date | date: "%-d %B %Y" }}</p>
     </div>
   </a>
-  <a href="#sunnexo" class="portfolioItem">
-    <img class="imgPortfolioItem" src="assets/post-images/2023/image2.png" alt="">
-    <div class="portfolioItemTooltip">
-      <h1>Sunnexo in MY portfolio???</h1>
-      <p>16 December 2023</p>
-    </div>
-  </a>
-  <a href="#whoa" class="portfolioItem">
-    <img class="imgPortfolioItem" src="assets/post-images/2023/image5.png" alt="">
-    <div class="portfolioItemTooltip">
-      <h1>WHOA</h1>
-      <p>16 December 2023</p>
-    </div>
-  </a>
-  <a href="#nya" class="portfolioItem">
-    <img class="imgPortfolioItem" src="assets/post-images/2023/image3.png" alt="">
-    <div class="portfolioItemTooltip">
-      <h1>Nya *starts firing in all directions*</h1>
-      <p>16 December 2023</p>
-    </div>
-  </a>
-  <a href="#lesbian" class="portfolioItem">
-    <img class="imgPortfolioItem" src="assets/post-images/2023/image4.png" alt="">
-    <div class="portfolioItemTooltip">
-      <h1>Only a lesbian could've drawn this</h1>
-      <p>16 December 2023</p>
-    </div>
-  </a>
-  <div class="portfolioSpacer"></div>
-  <div class="portfolioOverlay right"></div>
-  <a href="#buttonPressed" class="portfolioButton bottomRight" id="slideRight">
-    <p>Old projects</p>
-    <img src="assets/portfolio arrow.svg" alt="">
-  </a>
-</div>
-
-<script>
-  const buttonRight = document.getElementById('slideRight');
-  const buttonLeft = document.getElementById('slideLeft');
-  const scrollDistance = 900;
-
-  buttonRight.onclick = function () {
-    document.getElementById('portfolioContainer').scrollLeft += scrollDistance;
-  };
-  buttonLeft.onclick = function () {
-    document.getElementById('portfolioContainer').scrollLeft -= scrollDistance;
-  };
-</script>
-
-
-<!-- <script>
-  function clickAndDrag(selector, scroll_speed = 3, classOnEvent = 'grabbed_elem') {
-    const slider = document.querySelector(selector);
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-        e.preventDefault();
-        isDown = true;
-        slider.classList.add(classOnEvent);
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    
-        // prevent default child behavior
-        document.body.addEventListener('click', function( event ){
-            if (slider.contains(event.target)) {
-                event.preventDefault();
-            }
-        });
-    });
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove(classOnEvent);
-    });
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove(classOnEvent);
-    });
-    slider.addEventListener('mousemove', (e) => {
-        if(!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * scroll_speed; //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
-    });
-}
-
-// usage
-clickAndDrag('.portfolioContainer');
-</script> -->
-
-
-{% include socialbar.html %}
+{% endfor %}
