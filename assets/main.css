@@ -255,8 +255,48 @@ socialbar
 }
 
 @media only screen and (max-width: 600px) {
-  .socialbarContainer{
+  /* .socialbarContainer{
     display: none;
+  } */
+
+  #wrapper{
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .socialbarContainer{
+    top: auto;
+    right: auto;
+    bottom: 3rem;
+    position: absolute;
+  }
+
+  .positionStatic{
+    position: static;
+    align-self: center;
+    padding-top: 4rem;
+  }
+
+  .calendarContainer{
+    align-items: center;
+  }
+
+  .socialList{
+    flex-flow: row;
+  }
+
+  #calendarTime{
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #calendarDate{
+    font-size: .8rem;
+  }
+
+  .socialDivider{
+    width: 3rem;
+    margin-block: .7rem;
   }
 }
 
