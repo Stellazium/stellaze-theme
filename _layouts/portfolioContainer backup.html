@@ -1,0 +1,34 @@
+---
+layout: wrapper
+---
+
+<div class="portfolioContainer" id="portfolioContainer">
+  <a class="portfolioButton bottomLeft" id="slideLeft">
+    <img src="assets/portfolio arrow.svg" alt="">
+    <p>Recent projects</p>
+  </a>
+  <div class="portfolioSpacer"></div>
+  <div class="portfolioOverlay left"></div>
+  
+  {{content}}
+  
+  <div class="portfolioSpacer"></div>
+  <div class="portfolioOverlay right"></div>
+  <a class="portfolioButton bottomRight" id="slideRight">
+    <p>Old projects</p>
+    <img src="assets/portfolio arrow.svg" alt="">
+  </a>
+</div>
+
+<script>
+  const buttonRight = document.getElementById('slideRight');
+  const buttonLeft = document.getElementById('slideLeft');
+  const scrollDistance = 900;
+
+  buttonRight.onclick = function () {
+    document.getElementById('portfolioContainer').scrollLeft += scrollDistance;
+  };
+  buttonLeft.onclick = function () {
+    document.getElementById('portfolioContainer').scrollLeft -= scrollDistance;
+  };
+</script>

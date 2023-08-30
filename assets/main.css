@@ -276,7 +276,7 @@ portfolio
   gap: 1rem;
 
   /* firefox based scrollbar */
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: var(--grey);
 
   scroll-behavior: smooth;
@@ -362,14 +362,20 @@ portfolio
   opacity: 1;
 }
 
+.portfolioButtonContainer{
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+}
+
 .portfolioButton{
   z-index: 3;
   display: flex;
   flex-flow: row;
   gap: 1rem;
   padding: 1rem;
-  position: absolute;
-  bottom: var(--borderSpace);
+  /* position: absolute; */
+  /* bottom: var(--borderSpace); */
   border: 1px dashed var(--grey);
   cursor: pointer;
 }
@@ -387,13 +393,22 @@ portfolio
   user-select: none;
 }
 
-.bottomLeft{
+#portfolioWrapper{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* .bottomLeft{
   left: var(--borderSpace);
 }
 
 .bottomRight{
   right: var(--borderSpace);
-}
+} */
 
 .bottomRight img{
   transform: rotate(180deg);
