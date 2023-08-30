@@ -73,6 +73,7 @@ navbar
   gap: 2rem;
   max-width: fit-content;
   z-index: 4;
+  user-select: none;
 }
 
 .navbarList{
@@ -160,6 +161,7 @@ hero (front page)
   justify-content: center;
   align-items: center;
   align-self: center;
+  user-select: none;
 }
 
 .imgHeroPortrait{
@@ -211,6 +213,7 @@ socialbar
   display: flex;
   flex-flow: column;
   align-items: end;
+  user-select: none;
 }
 
 #calendarTime{
@@ -303,6 +306,7 @@ portfolio
   flex-flow: column;
   /* max-height: 40rem; */
   height: 100%;
+  user-select: none;
 }
 
 .imgPortfolioItem{
@@ -351,6 +355,7 @@ portfolio
 
 .portfolioItemTooltip h1, p{
   z-index: 4;
+  user-select: none;
 }
 
 .portfolioItem:hover .portfolioItemTooltip{
@@ -376,6 +381,10 @@ portfolio
 
 .portfolioButton img{
   max-width: 4rem;
+}
+
+.portfolioButton p{
+  user-select: none;
 }
 
 .bottomLeft{
