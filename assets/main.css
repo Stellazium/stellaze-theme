@@ -42,7 +42,22 @@ img{
   pointer-events: none;
 }
 
-#wrapper{
+p, a{
+  font-size: 1.2rem;
+}
+
+/* Define a transition duration during page visits */
+html.is-changing .transition-fade {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+
+/* Define the styles for the unloaded pages */
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.wrapper{
   height: 100%;
   width: 100%;
   display: flex;
@@ -53,7 +68,7 @@ img{
 }
 
 @media only screen and (max-width: 600px) {
-  #wrapper{
+  .wrapper{
     align-items: start;
   }
 }
@@ -175,7 +190,7 @@ hero (front page)
   flex-flow: column;
   align-items: center;
   text-align: center;
-  line-height: 1rem;
+  line-height: 1.4rem;
 }
 
 .heroLogo{
@@ -217,7 +232,7 @@ socialbar
 }
 
 #calendarTime{
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: right;
 }
 
@@ -259,7 +274,7 @@ socialbar
     display: none;
   } */
 
-  #wrapper{
+  .wrapper{
     flex-flow: column;
     align-items: center;
   }
@@ -414,8 +429,6 @@ portfolio
   flex-flow: row;
   gap: 1rem;
   padding: 1rem;
-  /* position: absolute; */
-  /* bottom: var(--borderSpace); */
   border: 1px dashed var(--grey);
   cursor: pointer;
 }
@@ -441,14 +454,6 @@ portfolio
   align-items: center;
   width: 100%;
 }
-
-/* .bottomLeft{
-  left: var(--borderSpace);
-}
-
-.bottomRight{
-  right: var(--borderSpace);
-} */
 
 .bottomRight img{
   transform: rotate(180deg);
@@ -520,4 +525,54 @@ portfolio
   .portfolioButton{
     display: none;
   }
+}
+
+/* ====================
+info page
+=====================*/
+
+.infoContainer{
+  display: flex;
+  flex-flow: column;
+  gap: .5rem;
+  user-select: none;
+  z-index: 2;
+
+  position: fixed;
+  bottom: var(--borderSpace);
+  left: var(--borderSpace);
+}
+
+.infoContainer p{
+  font-size: 1.2rem;
+}
+
+.infoSelectable{
+  user-select: all;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--yellow);
+  background: var(--white);
+}
+
+::selection {
+  color: var(--yellow);
+  background: var(--white);
+}
+
+
+.imgInfoIllustration{
+  max-height: 50vw;
+  mix-blend-mode: luminosity;
+}
+
+.infoLogo{
+  position: absolute;
+  bottom: var(--borderSpace);
+  right: var(--borderSpace);
+}
+
+.imgInfoLogo{
+  max-width: 35rem;
 }
