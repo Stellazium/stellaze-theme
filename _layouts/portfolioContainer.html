@@ -10,13 +10,13 @@ layout: wrapper
     
     {{content}}
     
-    <div class="portfolioSpacer"></div>
+    <div class="portfolioSpacer hideOnMobile"></div>
     <div class="portfolioOverlay right"></div>
     
   </div>
   
   <div class="portfolioButtonContainer">
-    <a class="portfolioButton bottomLeft" id="slideLeft">
+    <a class="portfolioButton bottomLeft transition-fade" id="slideLeft">
       <img src="assets/portfolio arrow.svg" alt="">
       <p>Recent projects</p>
     </a>
@@ -28,15 +28,18 @@ layout: wrapper
   
   
   <script>
-    const buttonRight = document.getElementById('slideRight');
-    const buttonLeft = document.getElementById('slideLeft');
-    const scrollDistance = 900;
-  
-    buttonRight.onclick = function () {
-      document.getElementById('portfolioContainer').scrollLeft += scrollDistance;
-    };
-    buttonLeft.onclick = function () {
-      document.getElementById('portfolioContainer').scrollLeft -= scrollDistance;
-    };
+    function setupPortfolioButtons(){
+      const buttonRight = document.getElementById('slideRight');
+      const buttonLeft = document.getElementById('slideLeft');
+      const scrollDistance = 900;
+    
+      buttonRight.onclick = function () {
+        document.getElementById('portfolioContainer').scrollLeft += scrollDistance;
+      };
+      buttonLeft.onclick = function () {
+        document.getElementById('portfolioContainer').scrollLeft -= scrollDistance;
+      };
+    }
+    setupPortfolioButtons();
   </script>
 </div>

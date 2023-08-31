@@ -5,6 +5,7 @@ variables
 :root{
   --white: #FEFEFE;
   --grey: #fefefe42;
+  --lightgrey: #fefefe82;
   --transparent: #fefefe00;
   --yellow: #E5A62A;
   --black: #111111;
@@ -208,6 +209,11 @@ hero (front page)
     max-width: 90vw;
     top: -1rem;
   }
+
+  .heroText p{
+    font-size:1rem;
+    line-height: 1rem;
+  }
 }
 
 
@@ -269,11 +275,27 @@ socialbar
   height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-  /* .socialbarContainer{
-    display: none;
-  } */
+.socialFooter{
+  font-size: .8rem;
+  color: var(--lightgrey);
+  writing-mode: vertical-lr;
+  padding-inline: 1rem;
+}
 
+.socialFooter a{
+  font-size: .8rem;
+  color: var(--lightgrey);
+  text-decoration: underline;
+  pointer-events: all;
+}
+
+.socialFooter a:hover{
+  color: var(--white);
+  text-decoration: underline;
+  
+}
+
+@media only screen and (max-width: 600px) {
   .wrapper{
     flex-flow: column;
     align-items: center;
@@ -290,6 +312,7 @@ socialbar
     position: static;
     align-self: center;
     padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .calendarContainer{
@@ -312,6 +335,12 @@ socialbar
   .socialDivider{
     width: 3rem;
     margin-block: .7rem;
+  }
+
+  .socialFooter{
+    writing-mode: horizontal-tb;
+    padding-inline: 0;
+    padding-block: 1rem;
   }
 }
 
@@ -525,6 +554,10 @@ portfolio
   .portfolioButton{
     display: none;
   }
+
+  .hideOnMobile{
+    display: none;
+  }
 }
 
 /* ====================
@@ -572,7 +605,7 @@ info page
 }
 
 .imgInfoIllustration{
-  max-height: 50vw;
+  max-height: 85vh;
   mix-blend-mode: luminosity;
 }
 
@@ -611,6 +644,7 @@ info page
     justify-content: center;
     overflow: hidden;
     width: 100vw;
+    max-height: none;
     height: auto;
   }
 
@@ -619,6 +653,7 @@ info page
     width: 70rem;
     object-fit: cover;
     max-height: 70vh;
+    padding-top:20rem;
   }
 
   .infoTextContainer{
@@ -628,6 +663,8 @@ info page
     position: static;
     bottom: auto;
     left: auto;
+
+    padding: 1rem;
   }
   .infoTextContainer p{
     font-size: 1rem;
