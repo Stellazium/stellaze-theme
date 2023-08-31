@@ -49,7 +49,7 @@ p, a{
 
 /* Define a transition duration during page visits */
 html.is-changing .transition-fade {
-  transition: opacity 0.1s;
+  transition: opacity 0.2s;
   opacity: 1;
 }
 
@@ -280,6 +280,7 @@ socialbar
   color: var(--lightgrey);
   writing-mode: vertical-lr;
   padding-inline: 1rem;
+  padding-right: .65rem;
 }
 
 .socialFooter a{
@@ -617,7 +618,7 @@ info page
 }
 
 .imgInfoLogo{
-  max-width: 35rem;
+  max-width: clamp(20rem, 40vw, 35rem);
 }
 
 @media only screen and (max-width: 600px) {
