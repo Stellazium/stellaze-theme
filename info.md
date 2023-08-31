@@ -7,4 +7,4 @@ navStyleButton3: selected yellow
 
 {% include info.html %}
 
-{% include socialbar.html %}
+{% include socialbar.html specialPosition="positionStatic" %}

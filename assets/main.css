@@ -48,7 +48,7 @@ p, a{
 
 /* Define a transition duration during page visits */
 html.is-changing .transition-fade {
-  transition: opacity 0.25s;
+  transition: opacity 0.1s;
   opacity: 1;
 }
 
@@ -534,6 +534,11 @@ info page
 .infoContainer{
   display: flex;
   flex-flow: column;
+}
+
+.infoTextContainer{
+  display: flex;
+  flex-flow: column;
   gap: .5rem;
   user-select: none;
   z-index: 2;
@@ -543,7 +548,7 @@ info page
   left: var(--borderSpace);
 }
 
-.infoContainer p{
+.infoTextContainer p{
   font-size: 1.2rem;
 }
 
@@ -561,6 +566,10 @@ info page
   background: var(--white);
 }
 
+.infoIllustration{
+  display: flex;
+  align-items: center;
+}
 
 .imgInfoIllustration{
   max-height: 50vw;
@@ -571,8 +580,56 @@ info page
   position: absolute;
   bottom: var(--borderSpace);
   right: var(--borderSpace);
+  z-index: 2;
 }
 
 .imgInfoLogo{
   max-width: 35rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .infoContainer{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infoLogo{
+    position: absolute;
+    top: 9rem;
+    bottom: auto;
+    right: auto;
+  }
+
+  .imgInfoLogo{
+    max-width: 80vw;
+  }
+
+  .infoIllustration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+  }
+
+  .imgInfoIllustration{
+    /* max-height: 37rem; */
+    width: 70rem;
+    object-fit: cover;
+    max-height: 70vh;
+  }
+
+  .infoTextContainer{
+    gap: .5rem;
+    z-index: 2;
+  
+    position: static;
+    bottom: auto;
+    left: auto;
+  }
+  .infoTextContainer p{
+    font-size: 1rem;
+  }
 }
